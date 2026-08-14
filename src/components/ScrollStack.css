@@ -1,0 +1,1 @@
+.scroll-stack { position: relative; }.scroll-stack-card { transform-origin: top center; will-change: transform; backface-visibility: hidden; }

@@ -1,0 +1,10 @@
+.lanyard-card { position: absolute; z-index: 2; top: 128px; right: clamp(24px, 8vw, 150px); width: clamp(210px, 20vw, 310px); height: min(58vh, 510px); pointer-events: none; perspective: 1000px; }
+.lanyard-card canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.lanyard-card__card { position: absolute; top: 0; left: 0; width: clamp(122px, 11vw, 168px); height: clamp(176px, 16vw, 238px); overflow: visible; border: 1px solid rgba(255,255,255,.45); background: #111725; box-shadow: 0 24px 55px rgba(0,0,0,.34); cursor: grab; pointer-events: auto; transform-origin: 50% 11px; touch-action: none; user-select: none; }
+.lanyard-card__card:after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(145deg, rgba(255,255,255,.24), transparent 30%, rgba(15,10,8,.4)); }
+.lanyard-card__card:active, .lanyard-card.is-dragging .lanyard-card__card { cursor: grabbing; }
+.lanyard-card__card .lanyard-card__media { filter: saturate(.75) contrast(1.1); }
+.lanyard-card__clip { position: absolute; z-index: 2; top: -9px; left: 50%; width: 25px; height: 17px; border: 2px solid #e0b879; border-bottom: 0; border-radius: 12px 12px 0 0; transform: translateX(-50%); }
+.lanyard-card__label { position: absolute; z-index: 3; right: 10px; bottom: 10px; color: rgba(255,246,223,.75); font: 8px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; writing-mode: vertical-rl; }
+@media (max-width: 800px) { .lanyard-card { top: 94px; right: 12px; width: 145px; height: 270px; opacity: .78; }.lanyard-card__card { width: 96px; height: 145px; }.lanyard-card__label { display: none; } }
+@media (prefers-reduced-motion: reduce) { .lanyard-card { display: none; } }
